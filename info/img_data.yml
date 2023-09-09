@@ -1,0 +1,43 @@
+sizeof_hdr: 348
+data_type: b''
+db_name: b''
+extents: 0
+session_error: 0
+regular: b''
+dim_info: 0
+dim: [  3 216 256  10   1   1   1   1]
+intent_p1: 0.0
+intent_p2: 0.0
+intent_p3: 0.0
+intent_code: 0
+datatype: 4
+bitpix: 16
+slice_start: 0
+pixdim: [ 1.      1.5625  1.5625 10.      1.      1.      1.      1.    ]
+vox_offset: 0.0
+scl_slope: nan
+scl_inter: nan
+slice_end: 0
+slice_code: 0
+xyzt_units: 0
+cal_max: 0.0
+cal_min: 0.0
+slice_duration: 0.0
+toffset: 0.0
+glmax: 0
+glmin: 0
+descrip: b''
+aux_file: b''
+qform_code: 0
+sform_code: 2
+quatern_b: 0.0
+quatern_c: 0.0
+quatern_d: 1.0
+qoffset_x: 0.0
+qoffset_y: 0.0
+qoffset_z: 0.0
+srow_x: [-1. -0.  0.  0.]
+srow_y: [-0. -1.  0.  0.]
+srow_z: [0. 0. 1. 0.]
+intent_name: b''
+magic: b'n+1'
