@@ -9,7 +9,7 @@ def extract_patients_info_to_csv(train=True):
     """
     patient_cfg = configparser.ConfigParser()
 
-    data = pd.DataFrame(columns=['Group', 'BMI_Category', 'BMI', 'Height', 'Weight', 'NbFrame', 'ED', 'ES'])
+    data = pd.DataFrame(columns=['patient_id', 'group', 'bmi_category', 'bmi', 'height', 'weight', 'nb_frame', 'ed', 'es'])
 
     if train:
         path = './data/training/patient'
@@ -25,7 +25,7 @@ def extract_patients_info_to_csv(train=True):
         ed = patient_cfg.get('Info', 'ED')
         es = patient_cfg.get('Info', 'ES')
         group = patient_cfg.get('Info', 'Group')
-        nbFrame = patient_cfg.get('Info', 'NbFrame')
+        nb_frame = patient_cfg.get('Info', 'NbFrame')
         height = float(patient_cfg.get('Info', 'Height'))
         weight = float(patient_cfg.get('Info', 'Weight'))
         bmi = weight / (height / 100) ** 2
@@ -45,9 +45,13 @@ def extract_patients_info_to_csv(train=True):
         else:
             bmi_category = 'Obesity'
 
-        data.loc[i] = [group, bmi_category, bmi, height, weight, nbFrame, ed, es]
+        data.loc[i] = [idx, group, bmi_category, bmi, height, weight, nb_frame, ed, es]
 
     # export to csv
-    data.to_csv('./info/test_patients_info.csv', index=False)
+    if train:
+        export_path = './info/train_patients_info.csv'
+    else:
+        export_path = './info/test_patients_info.csv'
+    data.to_csv(export_path, index=False)
 
     return data

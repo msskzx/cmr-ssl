@@ -2,6 +2,6 @@
 
 ## Outline
 
-- Understanding dataset, analysis
-- Using `FCT` model 
+- Understanding `ACDC` dataset, analysis
+- Using saved `FCT` model trained on `ACDC` dataset
 - Evaluating performance across different BMI categories
